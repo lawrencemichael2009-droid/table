@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="viewport" content="width=device-width, initial scale=1.0" />
+  <title> Premier League Table</title>
+
+  <style>
+ :root{
+    --bg: aqua;
+    --card: white;
+    --text: black;
+    --muted:#667;
+    --accent: black;
+    --radius:10px;
+    --gap:14px;
+  }
+  body{font-family:Inter,system-ui,Arial; background:var(--bg); color:var(--text); padding:24px;}
+
+/* ------------------------
+   Horizontal table styles
+   ------------------------ */
+.table-wrap {
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:12px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.04);
+  margin-bottom:28px;
+}
+
+/* make table horizontally scrollable on small screens */
+.table-responsive {
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+}
+
+/* base table */
+.table {
+  width:100%;
+  border-collapse:collapse;
+  min-width:700px; /* forces horizontal scroll on narrow screens */
+}
+.table thead th {
+  text-align:left;
+  padding:12px 14px;
+  position:sticky;
+  top:0;
+  background:linear-gradient(180deg,#fff,#fbfbff);
+  border-bottom:2px solid rgba(11,18,32,0.06);
+  font-weight:700;
+  color:var(--accent);
+}
+.table tbody td {
+  padding:12px 14px;
+  border-bottom:1px solid rgba(0,0,0,0.04);
+}
+
+/* zebra rows */
+.table tbody tr:nth-child(odd){ background:rgba(11,18,32,0.01) }
+
+/* small screens: reduce padding */
+@media (max-width:640px){
+  .table thead th, .table tbody td { padding:10px; font-size:14px; }
+}
+
+
+  </style>
+  </head>
+
+  <body>
+
+    <h2 class="h">Premier League </h2>
+    <div class="table-wrap">
+      <div class="table-responsive">
+        <table class="table" role="table" aria-label="Football table">
+          <thead>
+            <tr>
+              <th scope="col">Club</th>
+              <th scope="col">MP</th>
+              <th scope="col">W</th>
+              <th scope="col">D</th>
+              <th scope="col">L</th>
+              <th scope="col">Pts</th>
+              <th scope="col">GF</th>
+              <th scope="col">GA</th>
+              <th scope="col">GD</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td> 1. Arsenal</td>
+              <td>12</td>
+              <td>9</td>
+              <td>2</td>
+              <td>1</td>
+              <td>29</td>
+              <td>24</td>
+              <td>6</td>
+              <td>18</td>
+            </tr>
+            <tr>
+              <td> 2. Chelsea</td>
+              <td>12</td>
+              <td>7</td>
+              <td>2</td>
+              <td>3</td>
+              <td>23</td>
+              <td>23</td>
+              <td>11</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td> 3. Man City</td>
+              <td>12</td>
+              <td>7</td>
+              <td>1</td>
+              <td>4</td>
+              <td>22</td>
+              <td>24</td>
+              <td>10</td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td> 4. Aston Villa</td>
+              <td>12</td>
+              <td>6</td>
+              <td>3</td>
+              <td>3</td>
+              <td>21</td>
+              <td>15</td>
+              <td>11</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td> 5. Crystal palace</td>
+              <td>12</td>
+              <td>5</td>
+              <td>5</td>
+              <td>2</td>
+              <td>20</td>
+              <td>16</td>
+              <td>9</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td> 6. Brighton</td>
+              <td>12</td>
+              <td>5</td>
+              <td>4</td>
+              <td>3</td>
+              <td>19</td>
+              <td>19</td>
+              <td>16</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td> 7. Sunderland</td>
+              <td>12</td>
+              <td>5</td>
+              <td>4</td>
+              <td>3</td>
+              <td>19</td>
+              <td>14</td>
+              <td>11</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td> 8. Bournemouth</td>
+              <td>12</td>
+              <td>5</td>
+              <td>4</td>
+              <td>3</td>
+              <td>19</td>
+              <td>19</td>
+              <td>20</td>
+              <td>-1</td>
+            </tr>
+            <tr>
+              <td> 9. Tottenham</td>
+              <td>12</td>
+              <td>5</td>
+              <td>3</td>
+              <td>4</td>
+              <td>18</td>
+              <td>20</td>
+              <td>14</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td> 10. Man United</td>
+              <td>12</td>
+              <td>5</td>
+              <td>3</td>
+              <td>4</td>
+              <td>18</td>
+              <td>19</td>
+              <td>19</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td> 11. Everton</td>
+              <td>12</td>
+              <td>5</td>
+              <td>3</td>
+              <td>4</td>
+              <td>18</td>
+              <td>13</td>
+              <td>13</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td> 12. Liverpool</td>
+              <td>12</td>
+              <td>6</td>
+              <td>0</td>
+              <td>6</td>
+              <td>18</td>
+              <td>18</td>
+              <td>20</td>
+              <td>-2</td>
+            </tr>
+            <tr>
+              <td> 13. Brentford</td>
+              <td>12</td>
+              <td>5</td>
+              <td>1</td>
+              <td>6</td>
+              <td>16</td>
+              <td>18</td>
+              <td>19</td>
+              <td>-1</td>
+            </tr>
+            <tr>
+              <td> 14. Newcastle</td>
+              <td>12</td>
+              <td>4</td>
+              <td>3</td>
+              <td>5</td>
+              <td>15</td>
+              <td>13</td>
+              <td>15</td>
+              <td>-2</td>
+            </tr>
+            <tr>
+              <td> 15. Fuhlam</td>
+              <td>12</td>
+              <td>4</td>
+              <td>2</td>
+              <td>6</td>
+              <td>14</td>
+              <td>13</td>
+              <td>16</td>
+              <td>-3</td>
+            </tr>
+            <tr>
+              <td> 16. Nottm Forest</td>
+              <td>12</td>
+              <td>3</td>
+              <td>3</td>
+              <td>6</td>
+              <td>12</td>
+              <td>13</td>
+              <td>20</td>
+              <td>-7</td>
+            </tr>
+            <tr>
+              <td> 17. West Ham</td>
+              <td>12</td>
+              <td>3</td>
+              <td>2</td>
+              <td>7</td>
+              <td>11</td>
+              <td>15</td>
+              <td>25</td>
+              <td>-10</td>
+            </tr>
+            <tr>
+              <td> 18. Leeds united</td>
+              <td>12</td>
+              <td>3</td>
+              <td>2</td>
+              <td>7</td>
+              <td>11</td>
+              <td>11</td>
+              <td>22</td>
+              <td>-11</td>
+            </tr>
+            <tr>
+              <td> 19. Burnley</td>
+              <td>12</td>
+              <td>3</td>
+              <td>1</td>
+              <td>8</td>
+              <td>10</td>
+              <td>14</td>
+              <td>24</td>
+              <td>-10</td>
+            </tr>
+            <tr>
+              <td> 20. Wolves</td>
+              <td>12</td>
+              <td>0</td>
+              <td>2</td>
+              <td>10</td>
+              <td>2</td>
+              <td>7</td>
+              <td>27</td>
+              <td>-20</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
